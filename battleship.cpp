@@ -26,11 +26,10 @@ void gameSetup(int board[10][10]){
     int tempBoard[10][10];
     copyArr(board, tempBoard);
     int x1,x2,y1,y2;
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < 5; i++){
         std::cout << "Where would you like to place the front of your " << shipNames[i] << "? (x1,y1)" << std::endl;
-            std::cin >> x1;
-            std::cin >> y1;
-
+        std::cin >> x1;
+        std::cin >> y1;
         std::cout << "Where would you like to place the end of your " << shipNames[i] << "? (x2,y2)" << std::endl;
         do{
             std::cin >> x2;
@@ -69,10 +68,27 @@ void attack(int x, int y, int board[10][10], int * numHit){
     switch(val){
         case 0:
             board[x][y] = 2;
+            std::cout << "Miss!" << std::endl;
             break;
         case 1:
             board[x][y] = 3;
             numHit++;
+            std::cout << "Hit!" << std::endl;
             break;
     }
 }
+void secretPrintBoard(int board[10][10]){
+    std::cout << "  A  B  C  D  E  F  G  H  I  J" << std::endl;
+    for(int x = 0; x < 10; x++){
+        std::cout << x << " ";
+        for(int y = 0; y < 10; y++){
+            if(board[x][y] != 1) {
+                std::cout << board[x][y] << "  ";
+            }
+            else{
+                std::cout << "0  ";
+            }
+        }
+        std::cout << std::endl;
+    }
+    }
