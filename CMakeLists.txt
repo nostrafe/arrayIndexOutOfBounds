@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.7)
-project(QtStarter)
+project(Battleship)
 set(CMAKE_CXX_STANDARD 17)
 
 # Tell cmake where Qt is located
 set(Qt5_DIR "/usr/local/Cellar/qt/5.14.1/lib/cmake/Qt5")
 set(QT_INCLUDES "/usr/local/Cellar/qt/5.14.1/include")
-set(QT_INCLUDES "cmake-build-debug/QtStarterStarter_autogen/include/ui_QtStarterMainWindow.h")
+set(QT_INCLUDES "cmake-build-debug/QtStarterStarter_autogen/include/ui_mainwindow.h")
 MESSAGE("QT_INCLUDES: ${QT_INCLUDES}")
 
 # Find includes in corresponding build directories
