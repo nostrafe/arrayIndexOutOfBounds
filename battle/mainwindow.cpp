@@ -94,7 +94,7 @@ void MainWindow::paintEvent(QPaintEvent *event)
     cellW = (w - _leftPane) / (2 * _xCells);
     cellH = (h - _topPane - _bottomPane) / _yCells;
 
-    qDebug() << "hello.world";
+    qDebug() << ""; // used to print hello.world when placing an invalid ship
     QPainter painter(this);
     painter.setPen(Qt::red);
     painter.setBrush(Qt::blue);
